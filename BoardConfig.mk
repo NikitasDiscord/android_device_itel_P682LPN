@@ -7,6 +7,8 @@
 
 DEVICE_PATH := device/itel/P682LPN
 
+BOARD_USE_LEGACY_TOUCHSCREEN := true
+
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
