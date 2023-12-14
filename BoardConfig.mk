@@ -10,7 +10,7 @@ DEVICE_PATH := device/itel/P682LPN
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
-
+TW_LOAD_VENDOR_MODULES := $(DEVICE_PATH)/recovery/root/kheaders.ko
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
