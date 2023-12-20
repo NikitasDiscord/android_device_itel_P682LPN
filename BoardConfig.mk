@@ -63,7 +63,7 @@ BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 TARGET_KERNEL_CONFIG := P682LPN_defconfig
 TARGET_KERNEL_SOURCE := kernel/itel/P682LPN
-TW_LOAD_VENDOR_MODULES := $(DEVICE_PATH)/recovery/root/vendor/lib/modules
+TW_LOAD_VENDOR_MODULES := $(DEVICE_PATH)/recovery/root/vendor/lib/modules/adaptive-ts.ko
 # Kernel - prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true
 ifeq ($(TARGET_FORCE_PREBUILT_KERNEL),true)
