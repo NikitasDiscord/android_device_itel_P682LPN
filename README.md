@@ -1,7 +1,7 @@
 # Android device tree for itel Vision 3 Plus (P682LPN)
 
 Blocking checks
-- [ ] Correct screen/recovery size
+- [x] Correct screen/recovery size
 - [ ] Working Touch, screen
 - [ ] Backup to internal/microSD
 - [ ] Restore from internal/microSD
