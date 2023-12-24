@@ -9,10 +9,11 @@
 /metadata            ext4     /dev/block/by-name/metadata                      flags=display=metadata
 /socko               ext4     /dev/block/by-name/socko                         flags=display=socko;slotselect
 /odmko               ext4     /dev/block/by-name/odmko                         flags=display=odmko;slotselect
-/data                f2fs     /dev/block/by-name/userdata                      flags=display=Data
+/data                f2fs     /dev/block/by-name/userdata                      flags=display=Data,encryptable=/dev/block/by-name/metadata
 /storage/sdcard      vfat     /dev/block/mmcblk1 /dev/block/mmcblk1p1          flags=display="SD-Card";storage;wipeingui;removable
 /storage/usb-otg     vfat     /dev/block/sda /dev/block/sda1                   flags=display="USB-OTG";storage;wipeingui;removable
 
 system               ext4     /system                                          ro,barrier=1         wait,slotselect,avb=vbmeta_system_a,logical,first_stage_mount
 vendor               ext4     /vendor                                          ro,barrier=1         wait,slotselect,avb=vbmeta_vendor_a,logical,first_stage_mount
 product              ext4     /product                                         ro,barrier=1         wait,slotselect,avb,logical,first_stage_mount
+
