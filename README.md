@@ -2,7 +2,7 @@
 
 Blocking checks
 - [x] Correct screen/recovery size
-- [ ] Working Touch, screen
+- [x] Working Touch, screen
 - [ ] Backup to internal/microSD
 - [ ] Restore from internal/microSD
 - [ ] reboot to system
