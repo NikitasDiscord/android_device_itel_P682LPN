@@ -33,6 +33,7 @@ Minor checks
 - [ ] vibrate
 - [x] screenshot
 - [ ] partition SD card
+
 Also, recovery has bug - kernel panic in 5-10 minutes after TWRP startup.
 ```
 #
