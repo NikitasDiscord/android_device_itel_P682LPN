@@ -78,7 +78,7 @@ BOARD_SUPER_PARTITION_SIZE := 9126805504 # TODO: Fix hardcoded value
 BOARD_SUPER_PARTITION_GROUPS := itel_dynamic_partitions
 BOARD_ITEL_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext vendor product
 BOARD_ITEL_DYNAMIC_PARTITIONS_SIZE := 9122611200 # TODO: Fix hardcoded value
-TW_DEVICE_VERSION := TWRP 3.7.0 for P682LPN by NikitasFromDiscord and RadGoodNow @4pda
+TW_DEVICE_VERSION := nikitas&radgoodnow@4PDA
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 # Platform
 TARGET_BOARD_PLATFORM := ums9230
