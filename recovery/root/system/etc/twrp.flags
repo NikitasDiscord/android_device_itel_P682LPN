@@ -8,7 +8,7 @@
 /vendor_image               emmc     /dev/block/mapper/vendor_a	               flags=backup=1;flashimg=1;display="Vendor Image"
 /product_image              emmc     /dev/block/mapper/product_a               flags=backup=1;flashimg=1;display="Product Image"
 /system_ext_image	    	emmc     /dev/block/mapper/system_ext_a            flags=backup=1;flashimg=1;display="System_Ext Image"
-/super                  emmc     /dev/block/by-name/super                   flags=backup=1;flashimg=1;display="Super Image";backup=1;flashimg=1;
+/super                  emmc     /dev/block/by-name/super                      flags=backup=1;flashimg=1;display="Super Image";backup=1;flashimg=1;
 #Dynamic Partitions
 /system                 ext4    /dev/block/mapper/system_a            		   flags=backup=1;wipeingui;display="System"
 /system_ext             ext4	/dev/block/mapper/system_ext_a			       flags=backup=1;wipeingui;display="System_Ext"
