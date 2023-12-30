@@ -1,19 +1,18 @@
-/vbmeta              emmc     /dev/block/by-name/vbmeta_a                      flags=display=vbmeta;slotselect
-/vbmeta_system       emmc     /dev/block/by-name/vbmeta_system_a               flags=display=vbmeta_system;slotselect
-/vbmeta_vendor       emmc     /dev/block/by-name/vbmeta_vendor_a               flags=display=vbmeta_vendor;slotselect
-/dtbo                emmc     /dev/block/by-name/dtbo_a                        flags=display=dtbo;slotselect
-/boot                emmc     /dev/block/by-name/boot_a                        flags=display=boot;slotselect
+/vbmeta              emmc     /dev/block/by-name/vbmeta                        flags=display=vbmeta;slotselect
+/vbmeta_system       emmc     /dev/block/by-name/vbmeta_system                 flags=display=vbmeta_system;slotselect
+/vbmeta_vendor       emmc     /dev/block/by-name/vbmeta_vendor                 flags=display=vbmeta_vendor;slotselect
+/dtbo                emmc     /dev/block/by-name/dtbo                          flags=display=dtbo;slotselect
+/boot                emmc     /dev/block/by-name/boot                          flags=display=boot;slotselect
 /persist             ext4     /dev/block/by-name/persist                       flags=display=persist
 /logo                emmc     /dev/block/by-name/logo                          flags=display=logo
 /fbootlogo           emmc     /dev/block/by-name/fbootlogo                     flags=display=fbootlogo
 /metadata            ext4     /dev/block/by-name/metadata                      flags=display=metadata
 /socko               ext4     /dev/block/by-name/socko                         flags=display=socko;slotselect
 /odmko               ext4     /dev/block/by-name/odmko                         flags=display=odmko;slotselect
-/data                f2fs     /dev/block/by-name/userdata                      flags=display=Data,decryptable=/dev/block/by-name/metadata
-/storage/sdcard      vfat     /dev/block/mmcblk1 /dev/block/mmcblk1p1          flags=display="SD-Card";storage;wipeingui;removable
-/storage/usb-otg     vfat     /dev/block/sda /dev/block/sda1                   flags=display="USB-OTG";storage;wipeingui;removable
+/data                f2fs     /dev/block/by-name/userdata                      flags=display=Data,encryptable=/dev/block/by-name/metadata
+/storage/sdcard0     auto     /dev/block/mmcblk1 /dev/block/mmcblk1p1          flags=display="SD-Card";storage;wipeingui;removable
+/storage/usb-otg     auto     /dev/block/sda /dev/block/sda1                   flags=display="USB-OTG";storage;wipeingui;removable
 
-system               ext4     /system                                          ro,barrier=1         wait,slotselect,avb=vbmeta_system_a,logical,first_stage_mount
-vendor               ext4     /vendor                                          ro,barrier=1         wait,slotselect,avb=vbmeta_vendor_a,logical,first_stage_mount
-product              ext4     /product                                         ro,barrier=1         wait,slotselect,avb,logical,first_stage_mount
-
+system               ext4     /system                                          flags=display="System";logical;slotselect
+vendor               ext4     /vendor                                          flags=display="Vendor";logical;slotselect
+product              ext4     /product                                         flags=display="Product";logical;slotselect

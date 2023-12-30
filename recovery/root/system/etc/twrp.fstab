@@ -1,29 +1,30 @@
 #VBMETA
-/vbmeta              emmc     /dev/block/by-name/vbmeta_a                      flags=display=vbmeta;slotselect
-/vbmeta_system       emmc     /dev/block/by-name/vbmeta_system_a               flags=display=vbmeta_system;slotselect
-/vbmeta_vendor       emmc     /dev/block/by-name/vbmeta_vendor_a               flags=display=vbmeta_vendor;slotselect
+/vbmeta              emmc     /dev/block/by-name/vbmeta                        flags=display=vbmeta;slotselect
+/vbmeta_system       emmc     /dev/block/by-name/vbmeta_system                 flags=display=vbmeta_system;slotselect
+/vbmeta_vendor       emmc     /dev/block/by-name/vbmeta_vendor                 flags=display=vbmeta_vendor;slotselect
 
 #Images
-/system_image               emmc     /dev/block/mapper/system_a	               flags=backup=1;flashimg=1;display="System Image"
-/vendor_image               emmc     /dev/block/mapper/vendor_a	               flags=backup=1;flashimg=1;display="Vendor Image"
-/product_image              emmc     /dev/block/mapper/product_a               flags=backup=1;flashimg=1;display="Product Image"
-/system_ext_image	    	emmc     /dev/block/mapper/system_ext_a            flags=backup=1;flashimg=1;display="System_Ext Image"
-/super                  emmc     /dev/block/by-name/super                      flags=backup=1;flashimg=1;display="Super Image";backup=1;flashimg=1;
+/system_image               emmc     /dev/block/mapper/system	               flags=backup=1;flashimg=1;display="System Image";slotselect
+/vendor_image               emmc     /dev/block/mapper/vendor	               flags=backup=1;flashimg=1;display="Vendor Image";slotselect
+/product_image              emmc     /dev/block/mapper/product                 flags=backup=1;flashimg=1;display="Product Image";slotselect
+/system_ext_image	    	emmc     /dev/block/mapper/system_ext              flags=backup=1;flashimg=1;display="System_Ext Image";slotselect
+/super                      emmc     /dev/block/by-name/super                  flags=backup=1;flashimg=1;display="Super Image"
+
 #Dynamic Partitions
-/system                 ext4    /dev/block/mapper/system_a            		   flags=backup=1;wipeingui;display="System"
-/system_ext             ext4	/dev/block/mapper/system_ext_a			       flags=backup=1;wipeingui;display="System_Ext"
-/vendor             	ext4    /dev/block/mapper/vendor_a                     flags=backup=1;wipeingui;display="Vendor"
-/product            	ext4    /dev/block/mapper/product_a           		   flags=backup=1;wipeingui;display="Product"
+/system              ext4    system            		                           flags=display="System";logical;slotselect
+/system_ext          ext4	 system_ext			                               flags=display="System_Ext";logical;slotselect
+/vendor              ext4    vendor                                            flags=display="Vendor";logical;slotselect
+/product             ext4    product           		                           flags=display="Product";logical;slotselect
 
 #Other
-/dtbo                emmc     /dev/block/by-name/dtbo_a                        flags=display=dtbo;slotselect
-/boot                emmc     /dev/block/by-name/boot_a                        flags=display=boot;slotselect
+/dtbo                emmc     /dev/block/by-name/dtbo                          flags=display=dtbo;slotselect
+/boot                emmc     /dev/block/by-name/boot                          flags=display=boot;slotselect
 /persist             ext4     /dev/block/by-name/persist                       flags=display=persist
 /logo                emmc     /dev/block/by-name/logo                          flags=display=logo
 /fbootlogo           emmc     /dev/block/by-name/fbootlogo                     flags=display=fbootlogo
 /metadata            ext4     /dev/block/by-name/metadata                      flags=display=metadata
 /socko               ext4     /dev/block/by-name/socko                         flags=display=socko;slotselect
 /odmko               ext4     /dev/block/by-name/odmko                         flags=display=odmko;slotselect
-/data                f2fs     /dev/block/by-name/userdata                      flags=display=Data;decryptable=/dev/block/by-name/metadata
-/storage/sdcard      vfat     /dev/block/mmcblk1 /dev/block/mmcblk1p1          flags=display="SD-Card";storage;wipeingui;removable
-/storage/usb-otg     vfat     /dev/block/sda /dev/block/sda1                   flags=display="USB-OTG";storage;wipeingui;removable
+/data                f2fs     /dev/block/by-name/userdata                      flags=display=Data;encryptable=/dev/block/by-name/metadata
+/storage/sdcard0     auto     /dev/block/mmcblk1 /dev/block/mmcblk1p1          flags=display="SD-Card";storage;wipeingui;removable
+/usb-otg             auto     /dev/block/sda /dev/block/sda1                   flags=display="USB-OTG";storage;wipeingui;removable
