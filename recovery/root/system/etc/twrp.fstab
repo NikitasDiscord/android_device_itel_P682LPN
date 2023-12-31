@@ -18,7 +18,7 @@
 
 #Other
 /dtbo                emmc     /dev/block/by-name/dtbo                          flags=display=dtbo;slotselect
-/boot                emmc     /dev/block/by-name/boot                          flags=display=boot;slotselect
+/boot                emmc     /dev/block/by-name/boot                          flags=display=boot;slotselect;backup=1
 /persist             ext4     /dev/block/by-name/persist                       flags=display=persist
 /logo                emmc     /dev/block/by-name/logo                          flags=display=logo
 /fbootlogo           emmc     /dev/block/by-name/fbootlogo                     flags=display=fbootlogo
