@@ -1,6 +1,6 @@
 #
-# Copyright (C) 2023 The Android Open Source Project
-# Copyright (C) 2023 SebaUbuntu's TWRP device tree generator
+# Copyright (C) 2024 The Android Open Source Project
+# Copyright (C) 2024 SebaUbuntu's TWRP device tree generator
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -40,6 +40,12 @@ TARGET_NO_BOOTLOADER := false
 
 # Display
 TARGET_SCREEN_DENSITY := 320
+
+# MTP
+TW_HAS_MTP := true
+TW_MTP_DEVICE := /dev/mtp_usb
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage/lun.%d/file
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
 
 # Kernel
 BOARD_BOOTIMG_HEADER_VERSION := 2
